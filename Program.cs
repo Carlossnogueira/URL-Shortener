@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using URL_Shortener.Data;
+
 namespace URL_Shortener
 {
     public class Program
@@ -5,6 +8,10 @@ namespace URL_Shortener
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // Container
+            builder.Services.AddDbContext<UrlContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

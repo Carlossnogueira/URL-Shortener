@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using URL_Shortener.Model;
+using URL_Shortener.Data;
+using URL_Shortener.Model.Request;
 
 namespace URL_Shortener.Controllers
 {
     public class UrlController : Controller
     {
+
+        private readonly UrlContext _context;
+
         public IActionResult Index()
         {
             return View();
@@ -20,6 +24,7 @@ namespace URL_Shortener.Controllers
             {
                 return BadRequest("URL cannot be empty.");
             }
+
 
             return Ok(new
             {
