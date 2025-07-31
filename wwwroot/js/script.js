@@ -33,6 +33,6 @@ function getShortenedUrl(urlValue) {
       alert("Shortened URL: " + data.shortUrl);
     })
     .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error);
+      alert("There was a problem with the fetch operation:", error);
     });
 }
