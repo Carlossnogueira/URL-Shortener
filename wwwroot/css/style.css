@@ -69,4 +69,32 @@ input{
     background-color: #f0f0f0;
 }
 
+#copy-button{
+    display: block;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.result-container input,
+.result-container button {
+    margin: 0;          
+    display: inline-block;
+}
+
+.copy-button {
+    min-width: 80px;
+    min-height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5cc864;
+    color: white;
+    font-weight: bold;
+}
+
 
